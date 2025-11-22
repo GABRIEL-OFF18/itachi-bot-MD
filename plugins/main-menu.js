@@ -54,7 +54,7 @@ const menuSections = {
     ]
 };
 
-const PREFIX_SYMBOL = '🌵';
+const PREFIX_SYMBOL = '🌵'; 
 
 function clockString(ms) {
     if (isNaN(ms)) return '--:--:--';
@@ -72,7 +72,7 @@ function buildMenuText({ name, botname, uptime, totalreg, totalCommands }) {
     const sectionsText = Object.entries(menuSections)
         .map(([title, commands]) => {
             const commandsList = commands
-                .map(cmd => `│${PREFIX_SYMBOL}${cmd.startsWith(COMMAND_START) ? cmd : COMMAND_START + cmd}`)
+                .map(cmd => `│${PREFIX_SYMBOL}${cmd}`) 
                 .join('\n');
             return `\n╭─⬣「 ${title} 」⬣\n${commandsList}\n╰─⬣`;
         })
@@ -125,7 +125,6 @@ let handler = async (m, { conn }) => {
                 body: 'Isagi - menu',  
                 thumbnailUrl: 'https://files.catbox.moe/6orur7.jpg',
                 mediaType: 1, 
-
             },
             mentionedJid: [m.sender, userId],
             isForwarded: true,
