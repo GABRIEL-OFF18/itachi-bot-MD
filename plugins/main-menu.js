@@ -123,7 +123,7 @@ let handler = async (m, { conn }) => {
         contextInfo: {
             externalAdReply: {
                 title: 'Isagi - Bot', 
-                body: 'Iagi - menu',  
+                body: 'Isagi - menu',  
                 thumbnailUrl: 'https://files.catbox.moe/6orur7.jpg',
                 mediaType: 1, 
 
