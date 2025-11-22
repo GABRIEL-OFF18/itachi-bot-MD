@@ -95,7 +95,7 @@ Utiliza *#qr* ó *#code*
 ✦ Lista de comandos:
 ${sectionsText}
 
-> © Powered by Staff Mita Bot
+> © Powered by Staff isagi Bot
 `.trim();
 }
 
