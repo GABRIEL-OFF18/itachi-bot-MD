@@ -33,7 +33,7 @@ function buildMenuText({ name, botname, uptime, totalreg, totalCommands }) {
 https://whatsapp.com/channel/0029Vb6nOKBD8SDp0aFtCD3R
 ╰━━━━━━━━━━━━━━━
 
-*¿Quieres ser un sub bot?
+¿*Quieres ser un sub bot?
 Utiliza* *#qr* ó *#code*
  
 ✦ Lista de comandos:
