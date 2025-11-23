@@ -1,8 +1,8 @@
 let handler = async (m, { conn }) => {
     const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:𝘋𝘦𝘷-𝘧𝘦𝘥𝘦𝘹𝘺𝘻
-ORG:𝘋𝘦𝘷-𝘧𝘦𝘥𝘦𝘹𝘺𝘻
+FN:𝘋𝘦𝘷-Dani
+ORG:𝘋𝘦𝘷-Dani
 TITLE:Epictetus, Enchiridion — Chapter 1 (verse 1)
 EMAIL;type=INTERNET:doxeosjr@gmail.com 
 TEL;type=CELL;waid=51941247696:+51941247696
