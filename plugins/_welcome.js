@@ -2,8 +2,8 @@ import fs from 'fs'
 import { WAMessageStubType} from '@whiskeysockets/baileys'
 
 const newsletterJid = '120363423523597117@newsletter';
-const newsletterName = '👑 SHADOW-BOT-MD| ᴄʜᴀɴɴᴇʟ-ʙᴏᴛ 🌌';
-const packname = 'shadow-BOT-MD'
+const newsletterName = '🎄 ISAGI-BOT-MD| ᴄʜᴀɴɴᴇʟ-ʙᴏᴛ ⛄';
+const packname = 'isagi-BOT-MD'
 
 const iconos = [
   'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165065152-94d843.jpg',
@@ -28,13 +28,13 @@ async function generarBienvenida({ conn, userId, groupMetadata, chat}) {
       .replace(/@subject/g, groupMetadata.subject)
       .replace(/@desc/g, desc);
   } else {
-    const defaultWelcomeMessage = `╭─「 🎄👻 𝐒𝐇𝐀𝐃𝐎𝐖 𝐆𝐀𝐑𝐃𝐄𝐍: 𝐈𝐍𝐈𝐂𝐈𝐎 」─╮
+    const defaultWelcomeMessage = `╭─「 🎄👻 ISAGI YOICHI: 𝐈𝐍𝐈𝐂𝐈𝐎 」─╮
 
-@user ha sido convocado por las sombras festivas...
-Bienvenid@ al dominio secreto de *@subject*.
+@user ha sido convocado por las sombras festivas de navidad...
+Bienvenid@ ala cancha secreto de *@subject*.
 
-❄️ Tu llegada no es casual. Cada paso será observado.
-🌌 Tu poder será forjado en silencio. Tu lealtad, puesta a prueba.
+❄️ Tu llegada no es casual. no cualquiera es convocado por isagi Yoichi ☠️.
+🌌 Tu poder será forjado en silencio. Tu lealtad, puesta a prueba en las canchas ⛄.
 
 ╰─「 ✨ 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」─╯
 🧿 Miembros: ${groupSize}
@@ -61,15 +61,15 @@ async function generarDespedida({ conn, userId, groupMetadata, chat}) {
       .replace(/@user/g, username)
       .replace(/@subject/g, groupMetadata.subject);
   } else {
-    const defaultByeMessage = `╭─「 🌌🎄 𝐒𝐇𝐀𝐃𝐎𝐖 𝐆𝐀𝐑𝐃𝐄𝐍: 𝐑𝐄𝐓𝐈𝐑𝐀𝐃𝐀 」─╮
+    const defaultByeMessage = `╭─「 🌌🎄 ISAGI YOICHI: 𝐑𝐄𝐓𝐈𝐑𝐀𝐃𝐀 」─╮
 
-@user ha abandonado el círculo de las sombras navideñas.
+@user ha abandonado el mundo del futbol isagi Yoichi te esperara.
 Su presencia se desvanece... como todo lo que no deja huella.
 
 Grupo: *@subject*
 
 ❄️ Que su memoria permanezca en silencio.
-🌌 Las sombras no olvidan, pero tampoco lloran.
+🌌 Las leyendas no olvidan, pero tampoco lloran.
 
 ╰─「 ✨ 𝐄𝐒𝐓𝐀𝐃𝐎 𝐀𝐂𝐓𝐔𝐀𝐋 」─╯
 📉 Miembros: ${groupSize}
@@ -108,7 +108,7 @@ handler.before = async function (m, { conn, participants, groupMetadata}) {
       },
       externalAdReply: {
         title: packname,
-        body: '🎄🌌 𝐒𝐡𝐚𝐝𝐨𝐰 𝐆𝐚𝐫𝐝𝐞𝐧 𝐭𝐞 𝐝𝐚 𝐥𝐚 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚...',
+        body: '🎄🌌 Isagi Yoichi 𝐭𝐞 𝐝𝐚 𝐥𝐚 𝐛𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐚...',
         thumbnailUrl: getRandomIcono(),
         sourceUrl: global.redes,
         mediaType: 1,
@@ -131,7 +131,7 @@ handler.before = async function (m, { conn, participants, groupMetadata}) {
       },
       externalAdReply: {
         title: packname,
-        body: '🎄🌌 𝐋𝐚𝐬 𝐬𝐨𝐦𝐛𝐫𝐚𝐬 𝐬𝐞 𝐜𝐢𝐞𝐫𝐫𝐚𝐧 𝐬𝐢𝐧 𝐫𝐞𝐦𝐨𝐫𝐬𝐨...',
+        body: '🎄🌌 𝐋𝐚𝐬 canchas 𝐬𝐞 𝐜𝐢𝐞𝐫𝐫𝐚𝐧 𝐬𝐢𝐧 𝐫𝐞𝐦𝐨𝐫𝐬𝐨...',
         thumbnailUrl: getRandomIcono(),
         sourceUrl: global.redes,
         mediaType: 1,
