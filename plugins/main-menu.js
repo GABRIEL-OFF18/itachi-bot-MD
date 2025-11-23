@@ -120,10 +120,10 @@ const menuSections = {
         '#cry
         '#cafe
         '#coffee
-
-
-
-
+        '#clap  <@mencion>
+        '#bored
+        '#aburrido
+        '#llorar  <@mencion>
    ],   
 
 
