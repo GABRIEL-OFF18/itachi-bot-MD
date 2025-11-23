@@ -6,17 +6,17 @@ const newsletterName = '🎄 ISAGI-BOT-MD| ᴄʜᴀɴɴᴇʟ-ʙᴏᴛ ⛄';
 const packname = 'isagi-BOT-MD'
 
 const iconos = [
-  'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165065152-94d843.jpg',
-  'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165081580-660d44.jpg',
-  'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165160074-de0e81.jpg',
-  'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165128396-b5e568.jpg',
+  'https://files.catbox.moe/sc04sk.jpg',
+  'https://files.catbox.moe/0nktp8.jpg',
+  'https://files.catbox.moe/2v4dhc.jpg',
+  'https://files.catbox.moe/9qtuux.jpeg',
 ];
 
 const getRandomIcono = () => iconos[Math.floor(Math.random() * iconos.length)];
 
 async function generarBienvenida({ conn, userId, groupMetadata, chat}) {
   const username = `@${userId.split('@')[0]}`;
-  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/p3f0fx.jpg');
+  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/6orur7.jpg');
   const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Santo_Domingo", day: 'numeric', month: 'long', year: 'numeric'});
   const groupSize = groupMetadata.participants.length + 1;
   const desc = groupMetadata.desc?.toString() || 'Sin descripción';
@@ -51,7 +51,7 @@ ${desc}`;
 
 async function generarDespedida({ conn, userId, groupMetadata, chat}) {
   const username = `@${userId.split('@')[0]}`;
-  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://raw.githubusercontent.com/UploadsAdonix/archivos/main/1763165081580-660d44.jpg');
+  const pp = await conn.profilePictureUrl(userId, 'image').catch(() => 'https://files.catbox.moe/slhdnp.jpg');
   const fecha = new Date().toLocaleDateString("es-ES", { timeZone: "America/Santo_Domingo", day: 'numeric', month: 'long', year: 'numeric'});
   const groupSize = groupMetadata.participants.length - 1;
 
