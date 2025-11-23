@@ -59,7 +59,7 @@ const menuSections = {
     ],
     '✦ BÚSQUEDAS ✦': [
         '#tiktoksearch + <texto>',
-        '#',
+        '#pinterest + <texto>',
         '#',
         '#',
     ],
