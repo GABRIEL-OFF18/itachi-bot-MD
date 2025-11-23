@@ -101,7 +101,25 @@ const menuSections = {
         '#update',
         '#p',
         
-    ]  
+    ],  
+     '✦ ANIMES ✦': [
+        '#slap  <@mencion>',
+        '#kill  <@mencion>',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+    ],
+
+
 };
 
 let handler = async (m, { conn }) => {
