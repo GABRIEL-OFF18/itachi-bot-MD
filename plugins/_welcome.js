@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { WAMessageStubType} from '@whiskeysockets/baileys'
 
-const newsletterJid = '120363423523597117@newsletter';
+const newsletterJid = '120363420590235387@newsletter';
 const newsletterName = '🎄 ISAGI-BOT-MD| ᴄʜᴀɴɴᴇʟ-ʙᴏᴛ ⛄';
 const packname = 'isagi-BOT-MD'
 
