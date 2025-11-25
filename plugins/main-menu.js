@@ -49,7 +49,7 @@ const menuSections = {
         '#play + <texto>',
         '#tiktok + <url>',
         '#instagram + <url>',
-        '#',
+        '#mediafire + <url>',
         '#',
         '#',
         '#',
@@ -89,7 +89,7 @@ const menuSections = {
     '✦ TOOLS ✦': [
         '#s',
         '#qc',
-        '#toimg',
+        '#brat + <texto>',
         '#p',
         '#cbx',
         '#toghibli',
