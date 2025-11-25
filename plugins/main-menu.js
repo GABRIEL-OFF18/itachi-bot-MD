@@ -94,7 +94,7 @@ const menuSections = {
         '#calculadora + <ejemplo 5+7',
         '#toghibli',
         '#inspeccionar + <url>',
-        '#sc',
+        '#wikipedia + <texto>',
         '#hd',
     ],
      '✦ OWNER ✦': [
