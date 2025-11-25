@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) {
-await conn.reply(m.chat, `❀ Por favor, ingresa lo que quieres buscar en Wikipedia.`, m)
+await conn.reply(m.chat, `😺 *Por favor, ingresa lo que quieres buscar en Wikipedia*.`, m)
 return
 }
 try {
