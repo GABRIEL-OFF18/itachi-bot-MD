@@ -85,6 +85,9 @@ const menuSections = {
         '#kicknum',
         '#setprimary',
         '#tag',
+        '#advertencia',
+
+
     ],
     '✦ TOOLS ✦': [
         '#s',
