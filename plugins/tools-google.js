@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { text, usedPrefix, args }) => {
-if (!text) return m.reply(`❀ Por favor, proporciona el término de búsqueda que deseas realizar a *Google*.\n\nEjemplo: ${usedPrefix}google gatos curiosos`)
+if (!text) return m.reply(`🪷 *Por favor, proporciona el término de búsqueda que deseas realizar* a *Google*.\n\nEjemplo: ${usedPrefix}google gatos curiosos`)
 const apiUrl = `${global.APIs.delirius.url}/search/googlesearch?query=${encodeURIComponent(text)}`
 let maxResults = Number(args[1]) || 3
 try {
