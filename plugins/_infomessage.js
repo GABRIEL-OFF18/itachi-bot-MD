@@ -16,7 +16,7 @@ const users = m.messageStubParameters[0]
 const usuario = await resolveLidToRealJid(m?.sender, conn, m?.chat)
 const groupAdmins = participants.filter(p => p.admin)
 
-const channelRD = { id: '120363420590235387@newsletter', name: '🌵◌₊ Sʜᴀᴅᴏᴡ Bᴏᴛ Oғғɪᴄɪᴀʟ ◌❐🌵' }
+const channelRD = { id: '120363420590235387@newsletter', name: '⏤͟͟͞͞☆ Isagi V3 𝑩𝒐𝒕 – 𝑪𝒉𝒂𝒏𝒏𝒆𝒍 𝑶𝒇𝒇𝒊𝒄𝒊𝒂𝒍 ❀' }
 const textbot = 'Notificación de Bot!'
 const icono = 'https://files.catbox.moe/6orur7.jpg'
 const redes = 'https://github.com/gabrie-ux'
