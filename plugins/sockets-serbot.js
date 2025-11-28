@@ -29,7 +29,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
 if (!globalThis.db.data.settings[conn.user.jid].jadibotmd) return m.reply(`ꕥ El Comando *${command}* está desactivado temporalmente.`)
 let time = global.db.data.users[m.sender].Subs + 120000
 if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `ꕥ Debes esperar ${msToTime(time - new Date())} para volver a vincular un *Sub-Bot.*`, m)
-let socklimit = global.conns.filter(sock => sock?.user).length
+let socklimit = global.conns.filter(sock => sock?.user && sock.ws?.readyState !== ws.CLOSED).length // CORREGIDO: Cuenta solo sesiones abiertas y autenticadas.
 if (socklimit >= 20) {
 return m.reply(`ꕥ No se han encontrado espacios para *Sub-Bots* disponibles.`)
 }
