@@ -130,21 +130,23 @@ const menuSections = {
         '#aburrido',
         '#llorar  <@mencion>',
    ],   
-    ' ✦ ECONOMIA ✦': [
+    '✦ ECONOMIA ✦': [
         '#',
         '#',
         '#',
         '#',
         '#',
         '#',
-        '#a',
         '#',
         '#',
         '#',
         '#',
         '#',
         '#',
-};
+        '#',
+
+
+}
 
 let handler = async (m, { conn }) => {
     const userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
