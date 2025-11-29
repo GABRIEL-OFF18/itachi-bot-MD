@@ -98,14 +98,14 @@ const menuSections = {
         '#apostar',
         '#lotería',
         '#retirar',
-        '#semanal
-        '#robar
-        '#slut
-        '#slot
-        '#ruleta
-        '#pescar
-        '#pay
-        '#cazar
+        '#semanal',
+        '#robar',
+        '#slut',
+        '#slot',
+        '#ruleta',
+        '#pescar',
+        '#pay',
+        '#cazar',
     ],
 };
 
