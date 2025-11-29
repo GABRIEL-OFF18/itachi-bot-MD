@@ -130,7 +130,7 @@ const menuSections = {
         '#aburrido',
         '#llorar  <@mencion>',
    ],   
-   '✦ ANIMES ✦': [
+   '✦ ECONOMIA ✦': [
         '#',
         '#',
         '#',
