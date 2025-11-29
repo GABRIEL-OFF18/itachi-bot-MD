@@ -131,7 +131,7 @@ const menuSections = {
         '#llorar  <@mencion>',
    ],   
     '✦ ECONOMIA ✦': [
-        '#',
+        '#baltop',
         '#',
         '#',
         '#',
