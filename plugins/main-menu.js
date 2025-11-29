@@ -129,8 +129,8 @@ const menuSections = {
         '#bored',
         '#aburrido',
         '#llorar  <@mencion>',
-   ],   
-    '✦ ECONOMIA ✦': [
+    ],   
+     ' ✦  ECONOMIA ✦': [
         '#baltop',
         '#',
         '#',
