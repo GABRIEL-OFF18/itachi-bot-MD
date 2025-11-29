@@ -130,8 +130,20 @@ const menuSections = {
         '#aburrido',
         '#llorar  <@mencion>',
    ],   
-
-
+   '✦ ANIMES ✦': [
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#a',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
+        '#',
 };
 
 let handler = async (m, { conn }) => {
