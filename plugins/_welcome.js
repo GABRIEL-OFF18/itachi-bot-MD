@@ -28,13 +28,12 @@ async function generarBienvenida({ conn, userId, groupMetadata, chat}) {
       .replace(/@subject/g, groupMetadata.subject)
       .replace(/@desc/g, desc);
   } else {
-    const defaultWelcomeMessage = `╭─「 🎄👻 ISAGI YOICHI: 𝐈𝐍𝐈𝐂𝐈𝐎 」─╮
+    const defaultWelcomeMessage = `╭─「 🎄👻 ISAGI YOICHI: BIENVENIDA 」─╮
 
 @user ha sido convocado por las sombras festivas de navidad...
 Bienvenid@ ala cancha secreto de *@subject*.
 
 ❄️ Tu llegada no es casual. no cualquiera es convocado por isagi Yoichi ☠️.
-🌌 Tu poder será forjado en silencio. Tu lealtad, puesta a prueba en las canchas ⛄.
 
 ╰─「 ✨ 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」─╯
 🧿 Miembros: ${groupSize}
@@ -61,10 +60,9 @@ async function generarDespedida({ conn, userId, groupMetadata, chat}) {
       .replace(/@user/g, username)
       .replace(/@subject/g, groupMetadata.subject);
   } else {
-    const defaultByeMessage = `╭─「 🌌🎄 ISAGI YOICHI: 𝐑𝐄𝐓𝐈𝐑𝐀𝐃𝐀 」─╮
+    const defaultByeMessage = `╭─「 🌌🎄 ISAGI YOICHI: *ADIOS* 」─╮
 
-@user ha abandonado el mundo del futbol isagi Yoichi te esperara.
-Su presencia se desvanece... como todo lo que no deja huella.
+@user *ha abandonado este Grupo maravilloso isagi Yoichi te esperara*🪷.
 
 Grupo: *@subject*
 
