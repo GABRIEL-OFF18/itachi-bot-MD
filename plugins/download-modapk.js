@@ -1,31 +1,105 @@
-import { search, download } from 'aptoide-scraper'
+import fetch from 'node-fetch'
 
-var handler = async (m, { conn, usedPrefix, command, text }) => {
-if (!text) return conn.reply(m.chat, `🎄 *Por favor, ingrese el nombre de la apk para descargarlo*.`, m)
-try {
-await m.react('🕒')
-let searchA = await search(text)
-let data5 = await download(searchA[0].id)
-let txt = `*✨  APTOIDE - DESCARGAS  *\n\n`
-txt += `≡ Nombre : ${data5.name}\n`
-txt += `≡ Package : ${data5.package}\n`
-txt += `≡ Update : ${data5.lastup}\n`
-txt += `≡ Peso :  ${data5.size}`
-await conn.sendFile(m.chat, data5.icon, 'thumbnail.jpg', txt, m)
-if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
-return await conn.reply(m.chat, `🤖 El archivo es demasiado pesado.`, m)
+let handler = async (m, { conn, usedPrefix, command, text }) => {
+  if (!text) {
+    return conn.sendMessage(m.chat, {
+      text: `
+╔══✦•🌙•✦══╗
+   Búsqueda de APK  
+╚══✦•🌙•✦══╝
+
+⚡ Ingresa el nombre de la aplicación que quieras buscar.  
+
+📌 Ejemplo:
+${usedPrefix + command} Facebook Lite
+`
+    }, { quoted: m })
+  }
+
+  try {
+    // reacción al iniciar búsqueda
+    await conn.sendMessage(m.chat, { react: { text: "🔍", key: m.key } })
+
+    let results = await aptoide.search(text)
+    if (!results.length) {
+      return conn.sendMessage(m.chat, { 
+        text: `
+╔══✦•🪞•✦══╗
+ ⚠️ No se encontraron resultados  
+ Intenta con otro nombre...  
+╚══✦•🪞•✦══╝`
+      }, { quoted: m })
+    }
+
+    let app = results[0]
+    let data = await aptoide.download(app.id)
+    let dl = await conn.getFile(data.link)
+
+    await conn.sendMessage(m.chat, {
+      document: dl.data,
+      fileName: `${data.appname}.apk`,
+      mimetype: 'application/vnd.android.package-archive',
+      caption: `
+╔══✦•👻•✦══╗
+   ✅ *APK Descargado*  
+╚══✦•👻•✦══╝
+
+📱 *Nombre:* ${data.appname}  
+👨‍💻 *Desarrollador:* ${data.developer}  
+📦 *Versión:* ${app.version}  
+📊 *Tamaño:* ${(app.size / (1024 * 1024)).toFixed(2)} MB  `
+    }, { quoted: m })
+
+    // reacción al terminar
+    await conn.sendMessage(m.chat, { react: { text: "✅", key: m.key } })
+
+  } catch (e) {
+    console.error(e)
+    conn.sendMessage(m.chat, { 
+      text: `
+╔══✦•💀•✦══╗
+❌ Ocurrió un error al descargar  
+ Intenta más tarde...  
+╚══✦•💀•✦══╝`
+    }, { quoted: m })
+    await conn.sendMessage(m.chat, { react: { text: "❌", key: m.key } })
+  }
 }
-await conn.sendMessage(m.chat, { document: { url: data5.dllink }, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null }, { quoted: m })
-await m.react('✔️')
-} catch (error) {
-await m.react('✖️')
-return conn.reply(m.chat, `⚠︎ Se ha producido un problema.\n> Usa *${usedPrefix}report* para informarlo.\n\n${error.message}`, m)
-}}
 
-handler.tags = ['descargas']
-handler.help = ['apkmod']
-handler.command = ['apk', 'modapk', 'aptoide']
-handler.group = true
-handler.premium = true
+handler.help = ["apk"]
+handler.tags = ["downloader"]
+handler.command = /^apk$/i
+handler.register = false
 
 export default handler
+
+// Funciones de búsqueda/descarga
+const aptoide = {
+  search: async function (query) {
+    let res = await fetch(`https://ws75.aptoide.com/api/7/apps/search?query=${encodeURIComponent(query)}&limit=1`)
+    res = await res.json()
+    if (!res.datalist?.list?.length) return []
+
+    return res.datalist.list.map((v) => ({
+      name: v.name,
+      size: v.size,
+      version: v.file?.vername || "N/A",
+      id: v.package,
+      download: v.stats?.downloads || 0
+    }))
+  },
+
+  download: async function (id) {
+    let res = await fetch(`https://ws75.aptoide.com/api/7/apps/search?query=${encodeURIComponent(id)}&limit=1`)
+    res = await res.json()
+    if (!res.datalist?.list?.length) throw new Error("App no encontrada")
+
+    const app = res.datalist.list[0]
+    return {
+      img: app.icon,
+      developer: app.store?.name || "Desconocido",
+      appname: app.name,
+      link: app.file?.path
+    }
+  }
+}
