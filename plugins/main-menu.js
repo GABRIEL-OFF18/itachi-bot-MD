@@ -108,9 +108,11 @@ const menuSections = {
         '#ruleta',
         '#pescar',
         '#pay',
-    '✦ ECONOMIA ✦': [
+    '✦ COMANDOS FUN ✦': [
         '#formarpareja5
         '#formarpareja <@mencion>
+        '#doxear <@mencion>
+        '#top <texto>
      
        
     ],
