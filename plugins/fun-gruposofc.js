@@ -10,10 +10,10 @@ let handler = async (m, { conn }) => {
 
   const dev = '💎 Creador: Gabriel ofc'
   const catalogo = 'https://qu.ax/gPaYV.jpg' // o './media/grupos.jpg'
-  const emojis = '👨‍💻'
+  const emojis = '😼'
 
   let grupos = `
-╭─⟪ *💎GRUPOS OFICIALES * 
+╭─⟪ *GRUPOS OFICIAL DE ISAGI* 
 │
 │ 😼 *${namegrupo}*
 │ ${gp1}
