@@ -113,7 +113,8 @@ const menuSections = {
         '#formarpareja5',
         '#formarparejas',
         '#doxear',
-        '#top <texto>',        
+        '#top <texto>', 
+        '#grupos',       
     ],
 };
 
