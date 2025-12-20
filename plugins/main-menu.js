@@ -152,12 +152,12 @@ https://whatsapp.com/channel/0029Vb6nOKBD8SDp0aFtCD3R
 ╰━━━━━━━━━━━━━━━
 
 ¿*Quieres ser un sub bot?
-Utiliza* *#qr* ó *#code*
+Utiliza* *#code*
 
 ✦ Lista de comandos:
 ${sectionsText}
 
-> © Powered by Staff isagi Bot
+> © POWERED BY DX G😼
 `.trim();
 }
 
