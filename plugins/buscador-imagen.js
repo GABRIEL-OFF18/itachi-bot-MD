@@ -16,8 +16,8 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
           title: 'Búsqueda de Imagen',
           body: text,
           previewType: 0,
-          thumbnail: 'https:                                                  
-          sourceUrl: 'https://example.com' // Reemplaza con tu enlace
+          thumbnail: null,
+          sourceUrl: null
         }
       }
     });
