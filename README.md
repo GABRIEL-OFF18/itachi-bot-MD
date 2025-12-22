@@ -2,7 +2,7 @@
 # ⚽ ISAGI YOICHI ⚽
 
 <p align="center">
-  <img src="https://files.catbox.moe/uomr24.jpg" alt="IsagiBot MD Logo" width="600"/>
+  <img src="https://files.catbox.moe/y8iiar.jpg" alt="IsagiBot MD Logo" width="600"/>
 </p>
 
 <p align="center">
