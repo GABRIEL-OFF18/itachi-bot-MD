@@ -15,7 +15,7 @@
 
 ---
 
-# <p align="center"><img src="https://files.catbox.moe/1d1nyg.jpg" width="400" height="400" alt="MITA"/></p>
+# <p align="center"><img src="https://files.catbox.moe/pkwyo4.jpg" width="400" height="400" alt="ISAGI"/></p>
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" style="width: 100%;">
