@@ -53,15 +53,9 @@
 
 ### `—◉ DESARROLLADORES`
 
-<a href="https://wa.me/50557333744" target="blank"><img src="https://img.shields.io/badge/JonathanG-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 
-<a href="https://wa.me/51941247696" target="blank"><img src="https://img.shields.io/badge/Gabriel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
+<a href="https://wa.me/51941658192" target="blank"><img src="https://img.shields.io/badge/Gabriel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 
-<a href="https://wa.me/56940429343" target="blank"><img src="https://img.shields.io/badge/Abrahan-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
-<a href="https://wa.me/51901930696" target="blank"><img src="https://img.shields.io/badge/~ i.amdev.angel.xyz-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
-
-<a href="https://wa.me/18293142989" target="blank"><img src="https://img.shields.io/badge/Felix-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 
 
 <p align="center">
