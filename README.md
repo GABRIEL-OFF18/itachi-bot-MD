@@ -2,16 +2,16 @@
 # ⚽ ISAGI YOICHI ⚽
 
 <p align="center">
-  <img src="https://files.catbox.moe/uomr24.jpg" alt="MitaBot MD Logo" width="600"/>
+  <img src="https://files.catbox.moe/uomr24.jpg" alt="IsagiBot MD Logo" width="600"/>
 </p>
 
 <p align="center">
   <a href="https://github.com/jonathanggg">
-    <img src="http://readme-typing-svg.herokuapp.com?color=6A0DAD&size=26&center=true&vCenter=true&width=500&lines=✨+Mita+Bot+MD;⚡+Powering+Your+WhatsApp+Experience;🌟+Deja+Tu+Estrella+En+El+Repo" alt="Header Typing SVG">
+    <img src="http://readme-typing-svg.herokuapp.com?color=6A0DAD&size=26&center=true&vCenter=true&width=500&lines=✨+Isagi+Bot+MD;⚡+Powered+by+gabriel+owner;🌟+Deja+Tu+Estrella+En+El+Repo" alt="Header Typing SVG">
   </a>
 </p>
 
-> **🚀 Creado por JonathanG and Mancos y Asociados| 🔥 Deja tu estrellita en el repositorio  | 💜 Cuidate**
+> **🚀 Creado por gabriel and isagi y yoichi| 🔥 Deja tu estrellita en el repositorio  | 💜 Cuidate**
 
 ---
 
