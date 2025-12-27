@@ -107,7 +107,7 @@ const menuSections = {
     ],
 };
 
-const PREFIX_SYMBOL = '🌷';
+const PREFIX_SYMBOL = '🎁';
 
 function clockString(ms) {
     if (isNaN(ms)) return '--:--:--';
@@ -139,6 +139,7 @@ function buildMenuText({ name, botname, uptime, totalreg, totalCommands }) {
 ┃ 👥 *Usuarios:* ${totalreg}
 ┃ 📚 *Comandos:* ${totalCommands}
 ┃ 📣 *Canal:
+  *🎅🏻FELIS NAVIDAD Y PRÓSPERO AÑO NUEVO LES DESEA ISAGI YOICHI*
 https://whatsapp.com/channel/0029Vb6nOKBD8SDp0aFtCD3R
 ╰━━━━━━━━━━━━━━━
 
