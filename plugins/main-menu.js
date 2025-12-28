@@ -20,6 +20,7 @@ const menuSections = {
     ],
     '✦ *CONFIGURACIÓN* ✦': [
         '#antilink',
+        '#antispam',
     ],
     '✦ *GRUPOS* ✦': [
         '#promote',
