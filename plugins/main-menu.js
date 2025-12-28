@@ -10,6 +10,7 @@ const menuSections = {
         '#apk + <texto>',
         '#spotify + <url>',
         '#play2 <texto>',
+        '#capcut <url>',
     ],
     '✦ *BÚSQUEDAS* ✦': [
         '#tiktoksearch + <texto>',
