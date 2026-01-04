@@ -19,7 +19,7 @@ const menuSections = {
         '#buscar4',
         '#mercadolibre',
     ],
-    '🌱 *CONFIGURACIÓN🌱 ✦': [
+    '🌱 *CONFIGURACIÓN*🌱 ✦': [
         '#antilink',
         '#antispam',
     ],
