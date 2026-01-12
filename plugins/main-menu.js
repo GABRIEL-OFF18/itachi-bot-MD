@@ -82,7 +82,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
 
     // Bloque inicial
     let menuText = `
-╭━━━〔 ⚡️ *GAARA-ULTRA-MENU* ⚡️ 〕━━━⬣
+╭━━━〔 ⚡️ *ITACHI-MENU* ⚡️ 〕━━━⬣
 ┃ ❒ *Nombre*: *${botname}*
 ┃ ❒ *Creador*: *${creador}*
 ┃ ❒ *Estado*: *${modo}*
