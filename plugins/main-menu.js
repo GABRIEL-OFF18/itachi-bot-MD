@@ -1,177 +1,139 @@
-// créditos y creador de código BrayanOFC Y Modificado Por xzzys26
+import fs from 'fs'
 
-import { xpRange } from '../lib/levelling.js'
-import ws from 'ws'
-import { generateWAMessageFromContent, prepareWAMessageMedia } from '@whiskeysockets/baileys'
-import fetch from 'node-fetch'
+let handler = async (m, { conn, usedPrefix }) => {
+  const delay = ms => new Promise(res => setTimeout(res, ms))
+  let taguser = '@' + m.sender.split('@')[0]
 
-const botname = global.botname || '🌪️ ITACHI-BOT 🌪️'
-const creador = 'https://xzys-ul'
-const versionBot = '10.5.0' // cámbiala si tienes otra
-
-// Categorías
-let tags = {
-  'serbot': '🤖 𝗦𝗨𝗕-𝗕𝗢𝗧𝗦',
-  'info': '🌀 𝗜𝗡𝗙𝗢𝗦',
-  'main': '📜 𝗠𝗘𝗡𝗨',
-  'descargas': '⚡ DESCARGAS',
-  'cmd': '📝 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦',
-  'advanced': '🌟 𝗙𝗨𝗡𝗖𝗜𝗢𝗡𝗘𝗦 𝗔𝗩𝗔𝗡𝗭𝗔𝗗𝗔𝗦',
-  'game': '🎮 𝗝𝗨𝗘𝗚𝗢𝗦',
-  'rpg': '⚔️ 𝗥𝗣𝗚',
-  'group': '📚 𝗚𝗥𝗨𝗣𝗢𝗦',
-  'downloader': '📥 𝗗𝗘𝗦𝗖𝗔𝗥𝗚𝗔𝗦',
-  'sticker': '🖼️ 𝗦𝗧𝗜𝗖𝗞𝗘𝗥',
-  'audio': '🔊 𝗔𝗨𝗗𝗜𝗢',
-  'search': '🔎 𝗕𝗨𝗦𝗤𝗨𝗘𝗗𝗔',
-  'tools': '🧰 𝗛𝗘𝗥𝗔𝗠𝗜𝗘𝗡𝗧𝗔𝗦',
-  'fun': '🎉 𝗗𝗜𝗩𝗘𝗥𝗦𝗜𝗢𝗡',
-  'gacha': '🧧 𝗔𝗡𝗜𝗠𝗘',
-  'nsfw': '🔞 𝗡𝗦𝗙𝗪',
-  'premium': '💎 𝗣𝗥𝗘𝗠𝗜𝗨𝗠',
-  'weather': '🛰️ 𝗖𝗟𝗜𝗠𝗔',
-  'news': '📄 𝗡𝗢𝗧𝗜𝗖𝗜𝗔𝗦',
-  'ñutos': '🏛️ 𝗙𝗜𝗡𝗔𝗡𝗭𝗔',
-  'education': '🔰 𝗘𝗗𝗨𝗖𝗔𝗖𝗜𝗢𝗡',
-  'health': '❤️ 𝗦𝗔𝗟𝗨𝗗',
-  'entertainment': '📲 𝗘𝗡𝗧𝗥𝗘𝗧𝗘𝗡𝗜𝗠𝗜𝗘𝗡𝗧𝗢',
-  'sports': '⚽ 𝗗𝗘𝗣𝗢𝗥𝗧𝗘𝗦',
-  'travel': '✈️ 𝗩𝗜𝗔𝗝𝗘𝗦',
-  'food': '🥡 𝗖𝗢𝗠𝗜𝗗𝗔',
-  'shopping': '🛍️ 𝗖𝗢𝗠𝗣𝗥𝗔',
-  'productivity': '🔖 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗜𝗩𝗜𝗗𝗔𝗗',
-  'social': '📸 𝗥𝗘𝗗𝗘𝗦 𝗦𝗢𝗖𝗜𝗔𝗟𝗘𝗦',
-  'security': '🔱 𝗦𝗘𝗚𝗨𝗥𝗜𝗗𝗔𝗗',
-  'custom': '⚙️ 𝗣𝗘𝗥𝗦𝗢𝗡𝗔𝗟𝗜𝗭𝗔𝗗𝗢'
-}
-
-let handler = async (m, { conn, usedPrefix: _p }) => {
-  try {
-    let userId = m.mentionedJid?.[0] || m.sender
-    let user = global.db.data.users[userId] || { exp: 0, level: 1, premium: false }
-
-    let { level } = user
-
-    // Inicializar base de datos si no existe
-    if (!global.db.data.users) global.db.data.users = {}
-
-    // Contar usuarios reales (exp > 0)
-    let totalUsers = Object.values(global.db.data.users).filter(u => u.exp > 0).length
-
-    // Contar usuarios premium (premium === true)
-    let totalPremium = Object.values(global.db.data.users).filter(u => u.premium).length
-
-    let { min, xp, max } = xpRange(level, global.multiplier || 1)
-
-    // Plugins activos
-    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => ({
-      help: Array.isArray(plugin.help) ? plugin.help : (plugin.help ? [plugin.help] : []),
-      tags: Array.isArray(plugin.tags) ? plugin.tags : (plugin.tags ? [plugin.tags] : []),
-      limit: plugin.limit,
-      premium: plugin.premium,
-    }))
-
-    // Saludo + hora exacta
-    let saludo = getSaludo()
-
-    // Uptime real
-    let uptime = clockString(process.uptime() * 1000)
-
-    // Modo (Privado / Público)
-    let modo = global.opts?.self ? "Ⓟⓥ Privado" : "Ⓟ Público"
-
-    // Bloque inicial
-    let menuText = `
-╭━━━〔 ⚡️ *ITACHI-MENU* ⚡️ 〕━━━⬣
-┃ ❒ *Nombre*: *${botname}*
-┃ ❒ *Creador*: *${creador}*
-┃ ❒ *Estado*: *${modo}*
-┃ ❒ *Uptime*: *${uptime}*
-┃ ❒ *Premium*: *${totalPremium}*
-┃ ❒ *Versión*: *${versionBot}*
-╰━━━━━━━━━━━━━━━━━━━━━━⬣
-`
-
-    // Recorremos categorías (sin huecos)
-    for (let tag in tags) {
-      let comandos = help.filter(menu => menu.tags.includes(tag))
-      if (!comandos.length) continue
-
-      menuText += `
-╭━━━〔 ${tags[tag]} 〕━━━⬣
-${comandos.map(menu => menu.help.map(help =>
-  `┃ ➟ ${_p}${help}${menu.limit ? ' 🟡' : ''}${menu.premium ? ' 🔒' : ''}`
-).join('\n')).join('\n')}
-╰━━━━━━━━━━━━━━━━━━━━━━⬣
-`
-    }
-
-    menuText += `
-> 👑 Powered by gsbrie-ux 🥷🏽
-`
-
-    await m.react('⚡️')
-    await m.react('✅️')
-
-    let vidBuffer = await (await fetch('https://files.catbox.moe/dkvp8h.mp4')).buffer() // cambia la URL por tu video corto
-    let media = await prepareWAMessageMedia(
-      { video: vidBuffer, gifPlayback: true },
-      { upload: conn.waUploadToServer }
-    )
-
-    let msg = generateWAMessageFromContent(m.chat, {
-      viewOnceMessage: {
-        message: {
-          videoMessage: {
-            ...media.videoMessage,
-            gifPlayback: true,
-            caption: menuText,
-            contextInfo: {
-              isForwarded: true,
-              forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363417252896376@newsletter',
-                newsletterName: '𝗨𝗽𝗱𝗮𝘁𝗲 𝗚𝗮𝗮𝗿𝗮 𝗨𝗹𝘁𝗿𝗮-𝗠𝗗 👑⚡',
-                serverMessageId: 100
-              }
-            }
-          }
-        }
-      }
-    }, { userJid: m.sender, quoted: m })
-
-    await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
-
-  } catch (e) {
-    conn.reply(m.chat, `✖️ Error al mostrar el menú Gaara-Ultra.\n\n${e}`, m)
-    console.error(e)
+  // 🏷️ Categorías
+  let tags = {
+    'info': 'ᴍᴇɴᴜ ɪɴғᴏ',
+    'anime': 'ᴍᴇɴᴜ ᴀɴɪᴍᴇ',
+    'buscador': 'ᴍᴇɴᴜ ʙᴜsᴄᴀᴅᴏʀ',
+    'downloader': 'ᴍᴇɴᴜ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ',
+    'fun': 'ᴍᴇɴᴜ ғᴜɴ',
+    'grupo': 'ᴍᴇɴᴜ ɢʀᴜᴘᴏ',
+    'ai': 'ᴍᴇɴᴜ ᴀɪ',
+    'game': 'ᴍᴇɴᴜ ɢᴀᴍᴇ',
+    'jadibot': 'ᴍᴇɴᴜ ᴊᴀᴅɪʙᴏᴛ',
+    'main': 'ᴍᴇɴᴜ ᴍᴀɪɴ',
+    'nable': 'ᴍᴇɴᴜ ᴏɴ / ᴏғғ',
+    'nsfw': 'ᴍᴇɴᴜ ɴsғᴡ',
+    'owner': 'ᴍᴇɴᴜ ᴏᴡɴᴇʀ',
+    'sticker': 'ᴍᴇɴᴜ sᴛɪᴄᴋᴇʀ',
+    'tools': 'ᴍᴇɴᴜ ᴛᴏᴏʟs',
+    'economia': 'MENU ECONOMIA',
   }
+
+  // 📑 Estilos
+  let header = '*– %category*'
+  let body = '│  ◦ %cmd'
+  let footer = '└––'
+  let after = `✨ Isagi-bot-MD - Tu asistente  de anime favorito`
+
+  // 📊 Datos del usuario/bot
+  let user = global.db.data.users[m.sender]
+  let nombre = await conn.getName(m.sender)
+  let premium = user.premium ? '✅ Sí' : '❌ No'
+  let limite = user.limit || 0
+  let totalreg = Object.keys(global.db.data.users).length
+  let groupsCount = Object.values(conn.chats).filter(v => v.id.endsWith('@g.us')).length
+  let muptime = clockString(process.uptime())
+
+  function clockString(seconds) {
+    let h = Math.floor(seconds / 3600)
+    let m = Math.floor(seconds % 3600 / 60)
+    let s = Math.floor(seconds % 60)
+    return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':')
+  }
+
+  let infoUser = `
+ʜᴏʟᴀ, ${nombre}
+ꜱᴏʏ Isagi, ʟɪꜱᴛᴏ ᴘᴀʀᴀ ᴀʏᴜᴅᴀʀᴛᴇ
+
+*乂 ɪɴꜰᴏ ᴅᴇʟ ᴜꜱᴜᴀʀɪᴏ*
+┌  ◦ ᴇꜱᴛᴀᴅᴏ: ᴜꜱᴜᴀʀɪᴏ
+│  ◦ ᴘʀᴇᴍɪᴜᴍ: ${premium}
+└  ◦ ʟíᴍɪᴛᴇ: ${limite}
+
+*乂 ɪɴꜰᴏ ᴅᴇʟ ʙᴏᴛ*
+┌  ◦ ɢʀᴜᴘᴏꜱ: ${groupsCount}
+│  ◦ ᴛɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ: ${muptime}
+│  ◦ ᴜsᴜᴀʀɪᴏs: ${totalreg}
+└  ◦ ᴘʟᴀᴛᴀꜰᴏʀᴍᴀ: ʟɪɴᴜx
+
+*ꜱɪ ᴇɴᴄᴜᴇɴᴛʀᴀꜱ ᴀʟɢᴜ́ɴ ᴇʀʀᴏʀ, ᴘᴏʀ ꜰᴀᴠᴏʀ ᴄᴏɴᴛᴀᴄᴛᴀ ᴀʟ ᴏᴡɴᴇʀ.*
+`.trim()
+
+  // 📜 Lista de comandos organizados
+  let commands = Object.values(global.plugins).filter(v => v.help && v.tags).map(v => {
+    return {
+      help: Array.isArray(v.help) ? v.help : [v.help],
+      tags: Array.isArray(v.tags) ? v.tags : [v.tags]
+    }
+  })
+
+  let menu = []
+  for (let tag in tags) {
+    let comandos = commands
+      .filter(command => command.tags.includes(tag))
+      .map(command => command.help.map(cmd => body.replace(/%cmd/g, usedPrefix + cmd)).join('\n'))
+      .join('\n')
+    if (comandos) {
+      menu.push(header.replace(/%category/g, tags[tag]) + '\n' + comandos + '\n' + footer)
+    }
+  }
+
+  let finalMenu = infoUser + '\n\n' + menu.join('\n\n') + '\n' + after
+
+  // 🎴 Imagen portada
+  let imagen = 'https://o.uguu.se/vEXqDRPT.jpg
+
+  // 📌 Contacto falso estilo "ping"
+  let vcard = `BEGIN:VCARD
+VERSION:3.0
+N:;Itachi;;;
+FN:Itachi
+item1.TEL;waid=13135550002:+1 (313) 555-0002
+item1.X-ABLabel:Celular
+END:VCARD`
+
+  let qkontak = {
+    key: {
+      fromMe: false,
+      participant: "0@s.whatsapp.net",
+      remoteJid: "status@broadcast",
+    },
+    message: {
+      contactMessage: {
+        displayName: "I S A G I -  B O T",
+        vcard: vcard,
+      },
+    },
+  }
+
+  // 📄 Envío estilo PDF con contacto falso
+  await conn.sendMessage(m.chat, {
+    document: fs.readFileSync('./package.json'),
+    fileName: '🌸 isagi - ᑲ᥆𝗍 🌸',
+    mimetype: 'application/pdf',
+    caption: finalMenu,
+    contextInfo: {
+      externalAdReply: {
+        title: botname,
+        body: dev,
+        thumbnailUrl: imagen,
+        mediaType: 1,
+        renderLargerThumbnail: true
+      }
+    }
+  }, { quoted: qkontak }) // 👈 aquí la adaptación
+
+  await delay(400)
 }
 
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = ['menu', 'allmenu', 'menú']
+handler.command = ['menu','help','menú','allmenu','menucompleto']
 handler.register = true
 
 export default handler
-
-// Extra
-function clockString(ms) {
-  let h = Math.floor(ms / 3600000)
-  let m = Math.floor(ms / 60000) % 60
-  let s = Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-}
-
-// Saludo dinámico con hora real de Saint Martin (UTC-4)
-function getSaludo() {
-  let options = { timeZone: "America/Marigot", hour: "numeric", minute: "numeric", second: "numeric", hour12: false }
-  let horaStr = new Date().toLocaleString("es-DO", options)
-  let [hora] = horaStr.split(":").map(n => parseInt(n))
-
-  let saludo
-  if (hora >= 5 && hora < 12) saludo = "🌅 Buenos días"
-  else if (hora >= 12 && hora < 18) saludo = "☀️ Buenas tardes"
-  else saludo = "🌙 Buenas noches"
-
-  return `${saludo} | 🕒 ${horaStr}`
-}
