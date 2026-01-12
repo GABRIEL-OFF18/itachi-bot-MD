@@ -13,7 +13,7 @@ let tags = {
   'group': 'GROUPS',
   'nable': 'ON / OFF',
   'premium': 'PREMIUM',
-  'downloader': 'DOWNLOAD',
+  'descargas': 'DOWNLOAD',
   'tools': 'TOOLS',
   'fun': 'FUN',
   'nsfw': 'NSFW',
@@ -64,7 +64,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let menuText = `
 *⌬━━━━▣━━◤🚀◢━━▣━━━━━⌬*
 
-Hola *@${userId.split('@')[0]}* soy *𝐀𝐬𝐭𝐫𝐨-𝐁𝐨𝐭 ☆*
+Hola *@${userId.split('@')[0]}* soy *Itachi-𝐁𝐨𝐭 ☆*
 
 ╔══════⌬『 🌌 𝑰 𝑵 𝑭 𝑶 🌌』
 ║ ✎ *Cliente:* @${userId.split('@')[0]}
@@ -74,7 +74,8 @@ Hola *@${userId.split('@')[0]}* soy *𝐀𝐬𝐭𝐫𝐨-𝐁𝐨𝐭 ☆*
 ║ ✎ *Tiempo Activo:* ${uptime}
 ║ ✎ *Comandos »* ${totalCommands}
 ╚══════ ♢.💥.♢ ══════➤
-> El *Bot* ya dispone de algunas funciones sin prefijo gracias a *Deylin* creador y fundador de *Astro-Bot* y *Kirito-Bot MD* 
+> El Bot ya dispone de algunos comandos ya que esta en faces de prueba
+Creacion/1/12/2026
 
 *◤━━━━━ ☆. 🚀 .☆ ━━━━━◥*
 ⚙_*𝑳𝑰𝑺𝑻𝑨 𝑫𝑬 𝑪𝑶𝑴𝑨𝑵𝑫𝑶𝑺*_
@@ -87,7 +88,7 @@ ${commandsForTag.map(menu => menu.help.map(help => `∫➤ ${_p}${help} ${menu.l
 *┗━━━▣━━⌬⌨⌬━━▣━━━━⌬*`
 }).filter(text => text !== '').join('\n')}
 
-> © astro-Bot by Deylin
+> © itachi-Bot by gabrie-ux
 `;
 
     // no tocar 
