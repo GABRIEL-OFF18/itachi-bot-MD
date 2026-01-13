@@ -101,6 +101,14 @@ ${saludo}, *${taguser}*!
 ◈───≼ _*DESCARGAS*_ ≽──⊚
 ┝⎆ [  ${usedPrefix}ᴛɪᴋᴛᴏᴋ
 ┝⎆ [  ${usedPrefix}ᴘʟᴀʏ
+┝⎆ [  ${usedPrefix}yta
+┝⎆ [  ${usedPrefix}ytmp3
+┝⎆ [  ${usedPrefix}play2
+┝⎆ [  ${usedPrefix}ytv
+┝⎆ [  ${usedPrefix}yt
+┝⎆ [  ${usedPrefix}ytmp4
+┝⎆ [  ${usedPrefix}playaudio
+┝⎆ [  ${usedPrefix}mp4
 ◈┄──━━┉─࿂
 
 ◈───≼ _*BUSCADORES*_ ≽──⊚
