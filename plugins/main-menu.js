@@ -72,7 +72,7 @@ Hola *@${userId.split('@')[0]}* soy *Itachi-𝐁𝐨𝐭 ☆*
 ║ ✎ *Modo:* ${mode}
 ║ ✎ *Usuarios »* ${totalreg}
 ║ ✎ *Tiempo Activo:* ${uptime}
-║ ✎ *Comandos »* ${totalCommands}
+║ ✎ *owner*:51941658192
 ╚══════ ♢.💥.♢ ══════➤
 > El Bot ya dispone de algunos comandos ya que esta en faces de prueba
 Creacion/1/12/2026
