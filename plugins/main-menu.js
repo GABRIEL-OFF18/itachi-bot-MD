@@ -109,6 +109,8 @@ ${saludo}, *${taguser}*!
 ┝⎆ [  ${usedPrefix}ytmp4
 ┝⎆ [  ${usedPrefix}playaudio
 ┝⎆ [  ${usedPrefix}mp4
+┝⎆ [  ${usedPrefix}Facebook
+┝⎆ [  ${usedPrefix}instagram 
 ◈┄──━━┉─࿂
 
 ◈───≼ _*BUSCADORES*_ ≽──⊚
