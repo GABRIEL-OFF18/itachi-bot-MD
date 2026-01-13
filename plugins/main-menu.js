@@ -43,8 +43,8 @@ let handler = async (m, { conn, usedPrefix, __dirname, participants }) => {
 
 
     const channelRD = { 
-      id: '120363417186717632@newsletter', 
-      name: 'Oficial channel Roxy-MD'
+      id: '120363420590235387@newsletter', 
+      name: 'Oficial channel itachi-MD'
     }
 
 
