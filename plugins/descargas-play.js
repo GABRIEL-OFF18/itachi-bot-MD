@@ -84,6 +84,6 @@ const formatViews = v => {
 }
 
 handler.command = ["play", "yt", "mp3"]
-handler.tags = ["descargas"]
+handler.tags = ["download"]
 
 export default handler
