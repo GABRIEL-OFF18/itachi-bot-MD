@@ -27,9 +27,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 ╭──〔 👑 MENU OWNER 〕
 │
 │ ${usedPrefix}update
-│ ${usedPrefix}restart
-│ ${usedPrefix}cleartmp
-│ ${usedPrefix}detectar
 │
 ╰──────────────
       `.trim()
@@ -53,10 +50,10 @@ let handler = async (m, { conn, usedPrefix }) => {
       title: 'MENU GRUPO',
       code: 'MENU-GROUP',
       text: `
-╭──〔 ☃️ MENU GRUPO 〕
+╭──〔 ☃️ MENU SEARCH 〕
 │
-│ ${usedPrefix}kick
-│ ${usedPrefix}link
+│ ${usedPrefix}tiktoksearch 
+│ ${usedPrefix}wikipedia 
 │
 ╰──────────────
       `.trim()
