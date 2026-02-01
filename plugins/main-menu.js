@@ -21,16 +21,17 @@ Hola *%name* soy *NAGI*
 
 *NAGI-BOT EN PROCESO 🥷*
 
-┏━━━━━━━━ CREADOR
-┃ ✿︎ GABRIEL-UX 
+┏━━━━━━━━ *CREADOR*
+┃ 🥷 GABRIEL-UX 
+┃ *webs*
+┃ https://gabriel-rouge.vercel.app.
+┃ https://gabriel-downloader.vercel.app/
 ┗━━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━ INFO - BOT
 ┃  🫧 Cliente: %name
 ┃  🫧Exp: %exp
 ┃ 🫧 Nivel: %level
-┃ 🫧 owner: https://gabriel-rouge.vercel.app.
-┃ 🫧 descargas web: https://gabriel-downloader.vercel.app/
 ┗━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━━ INFO - USER
