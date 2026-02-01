@@ -14,10 +14,10 @@ let tags = {
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-Hola *%name* soy *Ian*
+Hola *%name* soy *NAGI*
 
 ┏━━━━━━━━ CREADOR
-┃  ✿︎ ιαɳαʅҽʝαɳԃɾσσƙ15x
+┃  ✿︎ .غابرييل 
 ┗━━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━ INFO - BOT
@@ -27,11 +27,11 @@ Hola *%name* soy *Ian*
 ┗━━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━━ INFO - USER
-┃  ✿︎ Bot: Ian Bot - MD 
+┃  ✿︎ Bot: NAGI Bot - MD 
 ┃  ✿︎ Modo Público
 ┃  ✿︎ Baileys: Multi Device
 ┃  ✿︎ Tiempo Activo: %muptime
-┃  ✿︎ Usuarios: %totalreg 
+┃  ✿︎ comandos: %totalcomandos
 ┗━━━━━━━━━━━━━━
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
