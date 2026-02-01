@@ -31,7 +31,6 @@ Hola *%name* soy *NAGI*
 ┃  ✿︎ Modo Público
 ┃  ✿︎ Baileys: Multi Device
 ┃  ✿︎ Tiempo Activo: %muptime
-┃  ✿︎ comandos: %totalcomandos
 ┗━━━━━━━━━━━━━━
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
