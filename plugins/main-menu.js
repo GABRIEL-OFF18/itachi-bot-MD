@@ -1,18 +1,12 @@
 //Código creado por JonathanG, dejen creditos hdp >:v
 
 const menuVideos = [
-    'https://files.catbox.moe/slo1l0.mp4',
-    'https://files.catbox.moe/awoz6k.mp4',
-    'https://files.catbox.moe/mci2sn.mp4',
-    'https://files.catbox.moe/n1rtnl.mp4'
+    'https://files.catbox.moe/oek4pg.mp4',
+    'https://files.catbox.moe/oek4pg.mp4',
+    'https://files.catbox.moe/oek4pg.mp4',
+    'https://files.catbox.moe/oek4pg.mp4'
 ];
-const menuImages = [
-    'https://files.catbox.moe/ofzm16.jpg',
-    'https://files.catbox.moe/5t7tnh.jpg',
-    'https://files.catbox.moe/37z59v.jpg',
-    'https://files.catbox.moe/rj89tz.jpg',
-    'https://files.catbox.moe/mud62o.jpg'
-];
+
 // --- --- --- --- --- --- --- --- --- --- -
 
 // Función auxiliar para el tiempo de actividad 
@@ -45,7 +39,7 @@ let handler = async (m, { conn, args }) => {
 ┃Tiempo activo: ${uptime}
 ┃Registros ${totalreg}
 ┃Comandos ${totalCommands}
-┃✦ Canal: https://whatsapp.com/channel/0029VbAt0n3It5rv4WOUcH00
+┃✦ Canal: https://whatsapp.com/channel/0029VbAt0n3It5rv4WOUcH0
 ╰━━━━━━━━━━━━━
 
 Quieres ser un sub bot?
