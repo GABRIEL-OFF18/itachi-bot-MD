@@ -55,23 +55,21 @@ Utiliza *#qr* ó *#code*
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
-╭━━━〔 📜 𝗜𝗡𝗙𝗢 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 〕━━━╮
-┃ ✦ menu | help | infobot
-┃ ✦ uptime | status | system
-┃ ✦ funciones | sc | serbot
-┃ ✦ speed | reporte | links | code
-┃ ✦ staff | bots | views
-┃ ✦ sug | ds | editautoresponder
+╭━━━〔 🪴 *MENU OWNER*〕━━━╮
+┃ ✦ update 
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
-╭━━━〔 📜 𝗜𝗡𝗙𝗢 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 〕━━━╮
-┃ ✦ menu | help | infobot
-┃ ✦ uptime | status | system
-┃ ✦ funciones | sc | serbot
-┃ ✦ speed | reporte | links | code
-┃ ✦ staff | bots | views
-┃ ✦ sug | ds | editautoresponder
+╭━━━〔 🎶 *MENU DOWNLOADER*〕━━━╮
+┃ ✦ play
+┃ ✦ souncloud
+┃ ✦ tt/tiktok 
+╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━〔 🔍 *MENU SEARCH*〕━━━╮
+┃ ✦ tiktoksearch 
+┃ ✦ tt 
+┃ ✦ fb / ig
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 
