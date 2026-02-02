@@ -54,14 +54,14 @@ for (let tag in grupos) {
 
 const secciones = Object.entries(grupos).map(([tag, cmds]) => {
   const emoji = emojis[tag] || '⭐'
-      return `╭━━🏰 ${tag.toUpperCase()} 🏰━⬣\n`
+      return `╭━━⚽ ${tag.toUpperCase()} ⚽━⬣\n`
      + cmds.map(cmd => `┃ ➩ ${cmd}`).join('\n') 
-     + `\n╰━🏰〔 🏰 〕🏰━⬣`
+     + `\n╰━⚽〔 ⚽ 〕⚽━⬣`
     }).join('\n\n')
 
 let menuText = `
 ╔══════════════╗
-  🏰 BALDUINO-MD 🏰
+  👑 NAGI-MD 👑
 ╚══════════════╝
 
 ${ucapan()} @${userId.split('@')[0]}
@@ -70,9 +70,7 @@ ${ucapan()} @${userId.split('@')[0]}
 👤 🄸🄽🄵🄾 🄳🄴🄻 🅄🅂🄴🅁
 ────────────────
 👤 𝐔𝐒𝐄𝐑: ${name}
-💎 𝐍𝐈𝐕𝐄𝐋: ${level}
 🗿 𝐄𝐗𝐏𝐄𝐑𝐈𝐄𝐍𝐂𝐈𝐀: ${exp}
-🥵 𝐑𝐀𝐍𝐆𝐎: Cachud@
 
 ────────────────
 🤖 🄸🄽🄵🄾 🄳🄴🄻 🄱🄾🅃
@@ -98,7 +96,7 @@ BALDUINO-BOT • SISTEMA ACTIVO
 ${secciones}
 `.trim()
 
-await m.react('🍂')
+await m.react('🏟️')
 
 await conn.sendMessage(
   m.chat,
