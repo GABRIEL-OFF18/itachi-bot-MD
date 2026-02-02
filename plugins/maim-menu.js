@@ -19,7 +19,11 @@ let handler = async (m, { conn, args }) => {
                "🌃 Buenas noches"
 
   // Agrupar comandos por categorías
-  let categories = {}
+  let categories = {
+    'main': 'MENU MAIN',
+    'descargas': :menu descargas'
+        
+}
   for (let plugin of Object.values(global.plugins)) {
     if (!plugin.help || !plugin.tags) continue
     for (let tag of plugin.tags) {
