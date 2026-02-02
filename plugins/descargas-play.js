@@ -10,9 +10,11 @@ import { prepareWAMessageMedia, generateWAMessageFromContent, proto } from '@whi
 const execPromise = promisify(exec)
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {
-  if (!text) return m.reply(`✳️ Ingresa el nombre del audio o video.\nEjemplo: *${usedPrefix + command} Confess your love*`)
+  if (!text) return m.reply(`✳️ Ingresa el nombre del audio o video.\nEjemplo: *${usedPrefix + command} Confess your love
+recuerda que solo funciona para el usuario que lo solicito*`)
 
-  await m.reply('*🔍 Buscando contenido...*')
+  await m.reply('*🔍 Buscando contenido
+recuerda que solo funciona para el usuario que lo solicito...*')
 
   try {
     const search = await yts(text)
@@ -36,6 +38,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
 *⏱️ Duración:* ${video.timestamp}
 *👁️ Vistas:* ${video.views.toLocaleString()}
 *📅 Publicado:* ${video.ago}
+solamente funciona para el usuario que lo solicito uwu ^⁠_⁠^
 
 👇 *Selecciona una opción abajo:*
     `.trim()
