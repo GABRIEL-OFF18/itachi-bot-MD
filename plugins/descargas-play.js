@@ -12,9 +12,7 @@ const execPromise = promisify(exec)
 let handler = async (m, { conn, text, command, usedPrefix }) => {
   if (!text) return m.reply(`✳️ Ingresa el nombre del audio o video.\nEjemplo: *${usedPrefix + command} Confess your love*`)
 
-  await m.reply('*🔍
-Buscando contenido
-recuerda que solo funciona para el usuario que lo solicito*')
+  await m.reply('*🔍Buscando contenido*')
 
   try {
     const search = await yts(text)
