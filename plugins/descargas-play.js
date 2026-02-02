@@ -56,7 +56,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
           id: "4"
         })
       },
-       }
+       
     ]
 
     const msg = generateWAMessageFromContent(m.chat, {
