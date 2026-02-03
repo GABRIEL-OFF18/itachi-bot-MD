@@ -96,7 +96,7 @@ BALDUINO-BOT • SISTEMA ACTIVO
 ${secciones}
 `.trim()
 
-      const buttons = [
+const buttons = [
       {
         name: "quick_reply",
         buttonParamsJson: JSON.stringify({
