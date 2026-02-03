@@ -25,11 +25,11 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botname = "NAGI-BOT "
+global.botname = "NAGI-BOT"
 global.creador = "oculto"
 global.textbot = "Nagi, mᥲძᥱ ᥕі𝗍һ ᑲᥡ gabrie-ux"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ gabrie-ux
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ gabrie-ux𒆜"
+global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ gabrie-ux"
+global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ gabrie-ux"
 global.etiqueta = "gabrie-ux"
 global.currency = "¥enes"
 global.web = "https://gabriel-downloader.vercel.app/"
