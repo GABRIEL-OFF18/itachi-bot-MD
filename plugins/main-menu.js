@@ -54,7 +54,7 @@ for (let tag in grupos) {
 
 const secciones = Object.entries(grupos).map(([tag, cmds]) => {
   const emoji = emojis[tag] || '⭐'
-      return `╭━━⚽ ${tag.toUpperCase()} ⚽━⬣\n`
+      return `>╭━━⚽ ${tag.toUpperCase()} ⚽━⬣\n`
      + cmds.map(cmd => `┃ ➩ ${cmd}`).join('\n') 
      + `\n╰━⚽〔 ⚽ 〕⚽━⬣`
     }).join('\n\n')
@@ -85,15 +85,15 @@ ${ucapan()} @${userId.split('@')[0]}
 > ⏰ F E C H A = H O R A
 ───────────────
 > 🕝 𝐇𝐎𝐑𝐀: ${hora}
-  📅 𝐅𝐄𝐂𝐇𝐀: ${fecha}
-  🏙️ 𝐃𝐈𝐀: ${dia}
-────────────────
+> 📅 𝐅𝐄𝐂𝐇𝐀: ${fecha}
+> 🏙️ 𝐃𝐈𝐀: ${dia}
+───────────────
 > BALDUINO-BOT • SISTEMA ACTIVO
-© 2025 - 2026 Powered By gabzz-ux
+> © 2025 - 2026 Powered By gabzz-ux
 ────────────────
 > 📂 COMANDOS
 ────────────────
-${secciones}
+> ${secciones}
 `.trim()
 
 
