@@ -25,12 +25,12 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botname = "*NAGI-BOT*"
+global.botname = "NAGI-BOT ^⁠_⁠^"
 global.creador = "oculto"
-global.textbot = "isagi, mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ani3"
-global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ⁱᵃᵐ|𝔇ani3"
-global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ani3𒆜"
-global.etiqueta = "ⁱᵃᵐ|𝔇ani3𒆜"
+global.textbot = "Nagi, mᥲძᥱ ᥕі𝗍һ ᑲᥡ gabrie-ux"
+global.dev = "© ⍴᥆ᥕᥱrᥱძ ᑲᥡ gabrie-ux
+global.author = "© mᥲძᥱ ᥕі𝗍һ ᑲᥡ gabrie-ux𒆜"
+global.etiqueta = "gabrie-ux"
 global.currency = "¥enes"
 global.banner = "https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1742678744381.jpeg"
 global.icono = "https://files.catbox.moe/5gdy0v.jpg"
