@@ -22,6 +22,14 @@ global.mes = d.toLocaleDateString('es', {month: 'long'})
 global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
+//emojis de NAGI-MD
+global.emoji = '🚀'
+global.emoji2 = '⭐'
+global.emoji3 = ' 🔫'
+global.emoji4 = '🍭'
+global.emoji5 = '✨'
+global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
+
 var canal = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'  
 var comunidad = 'https://chat.whatsapp.com/I0dMp2fEle7L6RaWBmwlAa'
 var git = 'https://github.com/The-King-Destroy'
