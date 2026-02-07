@@ -9,18 +9,13 @@ let tags = {
   'buscador': '「BUSQUEDAS」🍨',
   'fun': '「JUEGOS」🍨',
   'serbot': '「SUB BOTS」🍨',
-  'rpg': '「RPG」🍨',
   'rg': '「REGISTRO」🍨',
   'sticker': '「STICKERS」🍨',
-  'emox': '「ANIMES」🍨',
-  'database': '「DATABASE」🍨',
-  'grupo': '「GRUPOS」🍨',
-  'nable': '「ON / OFF」', 
-  'descargas': '「DESCARGAS」🍨',
+  'grupos': '「GRUPOS」🍨', 
+  'downloadet': '「DESCARGAS」🍨',
   'tools': '「HERRAMIENTAS」🍨',
   'info': '「INFORMACIÓN」🍨',
   'owner': '「CREADOR」🍨',
-  'logos': '「EDICION LOGOS」🍨', 
 }
 
 const vid = 'https://raw.githubusercontent.com/JTxs00/uploads/main/1770496563839.mp4';
